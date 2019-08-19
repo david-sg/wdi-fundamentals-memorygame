@@ -1,4 +1,4 @@
-var cards = [
+let cards = [
 {
 	rank:"queen",
 	suit:"hearts",
@@ -24,10 +24,10 @@ var cards = [
 // shuffle cards
 cards.sort(function(a, b){return 0.5 - Math.random()});
 // out
-console.log(cards);
+// console.log(cards);
 
-var cardsInPlay =[];
-var cardsInPlayId =[];
+let cardsInPlay =[];
+let cardsInPlayId =[];
 
 function checkForMatch(cardId){
  if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -41,7 +41,7 @@ window.location.reload();
 }
 
 function flipCard (){
-	var cardId = this.getAttribute('data-id');
+	let cardId = this.getAttribute('data-id');
 // check if same card has been picked already
 if (cardsInPlayId[0] === cards[cardId]){
 alert("You need to pick a new card.");
@@ -59,9 +59,9 @@ checkForMatch(cardId);
 
 }
 
-var createBoard = function (){
-for (var i = 0; i < cards.length; i++) {
-	var cardElement = document.createElement('img');
+let createBoard = function (){
+for (let i = 0; i < cards.length; i++) {
+	let cardElement = document.createElement('img');
 	cardElement.setAttribute('src', 'images/back.png');
 	cardElement.setAttribute('data-id', i);
 	cardElement.addEventListener('click', flipCard);
