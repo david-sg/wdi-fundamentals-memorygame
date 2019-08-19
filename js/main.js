@@ -21,6 +21,11 @@ var cards = [
 }
 ];
 
+// shuffle cards
+cards.sort(function(a, b){return 0.5 - Math.random()});
+// out
+console.log(cards);
+
 var cardsInPlay =[];
 var cardsInPlayId =[];
 
